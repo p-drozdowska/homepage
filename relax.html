@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <!-- Latest compiled JavaScript -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script>
+            function showAlert(){
+                if($("#myAlert").find("div#myAlert2").length==0){
+                    $("#myAlert").append("<div class='alert alert-success alert-dismissable' id='myAlert2'> <button type='button' class='close' data-dismiss='alert'  aria-hidden='true'>&times;</button> Success! Button clicked successfuly. Javascript works.</div>");
+                }
+                $("#myAlert").css("display", "");
+            }
+        </script>
+        <title>What to do in quarantine</title>
+    </head>
+    <body>
+        <div class="content">
+            <div class="header">
+                <h1>Life in Quarantine</h1>
+
+                <br>
+
+                <div class="menu-group">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="learn.html">Learn</a></li>
+                        <li><a href="keepactive.html">Keep active</a></li>
+                        <li class="selected"><a href="relax.html">Relax</a></li>
+                    </ul>
+                </div>
+
+                <br>
+
+            </div>
+
+            <p>As all I have left to do now for this problem set is use some JavaScript, I will skip listing relaxing activities. Sorry!</p>
+
+            <button type="button" onclick="document.getElementById('demo').innerHTML = Date(); showAlert();">Click me to display Date and Time and test JavaScript.</button>
+            <p id="demo"></p>
+            <div class="container" style="display:none;" id="myAlert">
+                <div class="alert alert-success alert-dismissable" id="myAlert2">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    Success! Button clicked successfuly. Javascript works.
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
